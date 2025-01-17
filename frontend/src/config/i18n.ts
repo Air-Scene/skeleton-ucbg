@@ -5,7 +5,7 @@ import Backend from 'i18next-http-backend';
 
 // Get the base URL for loading translations
 const getBasePath = () => {
-  // In development, use root path
+  // In development, use empty path
   if (import.meta.env.DEV) {
     return '';
   }
@@ -28,6 +28,9 @@ i18n
     backend: {
       loadPath: `${getBasePath()}/locales/{{lng}}/{{ns}}.json`,
     },
+
+    // Debug mode in development
+    debug: import.meta.env.DEV,
   });
 
 export default i18n; 

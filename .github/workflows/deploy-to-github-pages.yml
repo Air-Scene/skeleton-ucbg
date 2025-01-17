@@ -47,11 +47,15 @@ jobs:
         env:
           VITE_BACKEND_URL: ${{ secrets.PROD_BACKEND_URL || 'https://api-placeholder.example.com' }}
       
-      - name: Verify locales
+      - name: Verify static assets
         run: |
           if [ ! -d "dist/locales" ]; then
             echo "Copying locales to dist directory"
             cp -r public/locales dist/
+          fi
+          if [ ! -d "dist/themes" ]; then
+            echo "Copying themes to dist directory"
+            cp -r public/themes dist/
           fi
       
       - name: Setup Pages

@@ -4,9 +4,9 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import { resolve } from 'path'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   // Base URL should match your repository name
-  base: '/skeleton-ucbg/',
+  base: mode === 'development' ? '' : '/skeleton-ucbg/',
   
   plugins: [react(), tsconfigPaths()],
   
@@ -48,5 +48,21 @@ export default defineConfig({
 
   server: {
     port: 5173,
+    hmr: {
+      // Optimize HMR to reduce network requests
+      protocol: 'ws',
+      timeout: 1000,
+      overlay: true,
+    },
+    // Optimize module loading
+    watch: {
+      usePolling: false,
+      interval: 100,
+    },
   },
-})
+
+  optimizeDeps: {
+    // Pre-bundle dependencies to reduce initial load
+    include: ['react', 'react-dom', 'react-router-dom', '@tanstack/react-query'],
+  },
+}))

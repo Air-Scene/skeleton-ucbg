@@ -14,6 +14,16 @@ const THEMES: ThemeConfig = {
   dark: 'lara-dark-blue'
 } as const;
 
+// Get the base URL for loading themes
+const getBasePath = () => {
+  // In development, use empty path
+  if (import.meta.env.DEV) {
+    return '';
+  }
+  // In production, use the repository name as base path
+  return '/skeleton-ucbg';
+};
+
 const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(localStorage.getItem(THEME_STORAGE_KEY) === 'dark');
 
@@ -21,7 +31,7 @@ const ThemeToggle = () => {
     const link = document.createElement('link');
     link.id = THEME_LINK_ID;
     link.rel = 'stylesheet';
-    link.href = `/themes/${theme}/theme.css`;
+    link.href = `${getBasePath()}/themes/${theme}/theme.css`;
 
     const existingLink = document.getElementById(THEME_LINK_ID);
 
