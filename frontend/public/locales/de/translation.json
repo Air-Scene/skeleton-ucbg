@@ -1,0 +1,115 @@
+{
+  "common": {
+    "welcome": "Willkommen",
+    "loading": "Wird geladen...",
+    "save": "Speichern",
+    "error": "Fehler",
+    "success": "Erfolgreich",
+    "notFound": "Seite nicht gefunden",
+    "notFoundDescription": "Die gesuchte Seite existiert nicht oder Sie haben keine Berechtigung, darauf zuzugreifen.",
+    "goBack": "Zurück",
+    "firstName": "Vorname",
+    "lastName": "Nachname"
+  },
+  "password": {
+    "label": "Passwort",
+    "new": "Neues Passwort",
+    "current": "Aktuelles Passwort",
+    "confirm": "Passwort bestätigen",
+    "update": "Passwort aktualisieren",
+    "placeholder": "Enter your password",
+    "minLength": "Passwort muss mindestens 8 Zeichen lang sein",
+    "confirmPlaceholder": "Passwort erneut eingeben",
+    "dontMatch": "Passwörter stimmen nicht überein",
+    "needsUppercase": "Passwort muss mindestens eine Großbuchstaben enthalten",
+    "needsLowercase": "Passwort muss mindestens eine Kleinbuchstaben enthalten",
+    "needsNumber": "Passwort muss mindestens eine Zahl enthalten"
+  },
+  "language": {
+    "label": "Sprache",
+    "selectLanguage": "Sprache auswählen",
+    "en": "Englisch",
+    "de": "Deutsch",
+    "tr": "Türkisch"
+  },
+  "role": {
+    "label": "Rolle",
+    "user": "Benutzer",
+    "customer": "Kunde",
+    "selectRole": "Rolle auswählen"
+  },
+  "nav": {
+    "profile": "Profil",
+    "settings": "Einstellungen",
+    "dashboard": "Dashboard"
+  },
+  "sidebar": {
+    "menu": {
+      "dashboard": "Dashboard",
+      "users": "Benutzer",
+      "products": "Produkte",
+      "orders": "Bestellungen",
+      "settings": "Einstellungen"
+    }
+  },
+  "auth": {
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "invalidCredentials": "Ungültige Anmeldedaten",
+    "backToLogin": "Zum Login",
+    "welcomeBack": "Willkommen zurück",
+    "rememberMe": "Angemeldet bleiben",
+    "signIn": "Anmelden",
+    "serverError": "Serverfehler",
+    "cannotRegisterAsAdmin": "Admin-Rolle nicht registrierbar",
+    "userNotFound": "Benutzer nicht gefunden",
+    "account": {
+      "create": "Konto erstellen",
+      "alreadyHave": "Hast du bereits ein Konto?",
+      "createToday": "Heute erstellen!",
+      "noAccount": "Hast du kein Konto?"
+    },
+    "registration": {
+      "success": "Registrierung erfolgreich! Bitte überprüfen Sie Ihre E-Mail.",
+      "failed": "Registrierung fehlgeschlagen. Bitte versuche es erneut."
+    },
+    "email": {
+      "label": "E-Mail",
+      "placeholder": "E-Mail-Adresse eingeben",
+      "invalid": "Ungültige E-Mail-Adresse",
+      "exists": "E-Mail bereits registriert"
+    },
+    "verification": {
+      "success": "Email-Verifizierung erfolgreich!",
+      "description": "Ihre E-Mail wurde erfolgreich verifiziert. Sie können sich jetzt anmelden.",
+      "proceedToLogin": "Zum Login",
+      "failed": "Email-Verifizierung fehlgeschlagen",
+      "expired": "Verifizierungslink abgelaufen",
+      "alreadyVerified": "E-Mail bereits verifiziert"
+    },
+    "forgotPassword": {
+      "label": "Passwort vergessen?",
+      "sendResetLink": "Passwort zurücksetzen E-Mail senden",
+      "success": "Passwort zurücksetzen E-Mail gesendet",
+      "description": "Wir haben Ihnen eine Passwort zurücksetzen E-Mail gesendet. Bitte überprüfen Sie Ihre E-Mail und folgen Sie den Anweisungen, um Ihr Passwort zurückzusetzen."
+    },
+    "resetPassword": {
+      "label": "Passwort zurücksetzen",
+      "success": "Passwort zurücksetzen war erfolgreich",
+      "submit": "Passwort zurücksetzen",
+      "description": "Ihr Passwort wurde erfolgreich zurückgesetzt. Sie können sich jetzt anmelden."
+    }
+  },
+  "dashboard": {
+    "totalUsers": "Gesamtbenutzer",
+    "activeUsers": "Aktive Benutzer",
+    "totalCustomers": "GesamtKunden",
+    "totalPosts": "Gesamtbeiträge",
+    "newUsers": "Neue Benutzer heute",
+    "welcomeMessage": "Willkommen, {{name}}"
+  },
+  "home": {
+    "welcome": "Willkommen in unserer App",
+    "goToDashboard": "Zum Dashboard"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "common": {
+    "welcome": "Hoş Geldiniz",
+    "loading": "Yükleniyor...",
+    "save": "Kaydet",
+    "error": "Hata",
+    "success": "Başarılı",
+    "notFound": "Sayfa Bulunamadı",
+    "notFoundDescription": "Aradığınız sayfa mevcut değil veya erişim izniniz yok.",
+    "goBack": "Geri Dön",
+    "firstName": "Ad",
+    "lastName": "Soyad"
+  },
+  "password": {
+    "label": "Şifre",
+    "new": "Yeni Şifre",
+    "current": "Mevcut Şifre",
+    "confirm": "Şifreyi doğrula",
+    "update": "Şifre güncelle",
+    "placeholder": "Şifrenizi girin",
+    "minLength": "Şifre en az 8 karakter olmalıdır",
+    "confirmPlaceholder": "Şifrenizi tekrar girin",
+    "dontMatch": "Şifreler eşleşmiyor",
+    "needsUppercase": "Şifre en az bir büyük harf içermeli",
+    "needsLowercase": "Şifre en az bir küçük harf içermeli",
+    "needsNumber": "Şifre en az bir sayı içermeli"
+  },
+  "language": {
+    "label": "Dil",
+    "selectLanguage": "Dil seçi",
+    "en": "İngilizce",
+    "de": "Almanca",
+    "tr": "Türkçe"
+  },
+  "role": {
+    "label": "Rol",
+    "user": "Kullanıcı",
+    "customer": "Müşteri",
+    "selectRole": "Rol seçin"
+  },
+  "nav": {
+    "profile": "Profil",
+    "settings": "Ayarlar",
+    "dashboard": "Panel"
+  },
+  "sidebar": {
+    "menu": {
+      "dashboard": "Panel",
+      "users": "Kullanıcılar",
+      "products": "Ürünler",
+      "orders": "Siparişler",
+      "settings": "Ayarlar"
+    }
+  },
+  "auth": {
+    "register": "Kayıt Ol",
+    "logout": "Çıkış Yap",
+    "invalidCredentials": "Geçersiz kimlik bilgileri",
+    "backToLogin": "Giriş yap",
+    "welcomeBack": "Tekrar Hoş Geldiniz",
+    "rememberMe": "Beni hatırla",
+    "signIn": "Giriş Yap",
+    "cannotRegisterAsAdmin": "Admin rolüyle kayıt olamaz",
+    "serverError": "Sunucu Hatası",
+    "userNotFound": "Kullanıcı bulunamadı",
+    "account": {
+      "create": "Hesap oluştur",
+      "alreadyHave": "Zaten hesabınız var mı?",
+      "createToday": "Bugün oluşturun!",
+      "noAccount": "Hesabınız yok mu?"
+    },
+    "registration": {
+      "success": "Kayıt başarılı! Lütfen e-postanızı kontrol edin.",
+      "failed": "Kayıt başarısız. Lütfen tekrar deneyin."
+    },
+    "email": {
+      "label": "E-posta",
+      "placeholder": "E-posta adresinizi girin",
+      "invalid": "Geçersiz e-posta adresi",
+      "exists": "E-posta zaten kayıtlı"
+    },
+    "verification": {
+      "success": "Email doğrulama başarılı!",
+      "description": "E-postanız başarıyla doğrulandı. Şimdi giriş yapabilirsiniz.",
+      "proceedToLogin": "Giriş yap",
+      "failed": "Email doğrulama başarısız",
+      "expired": "Doğrulama linki süresi doldu",
+      "alreadyVerified": "E-posta zaten doğrulandı"
+    },
+    "forgotPassword": {
+      "label": "Şifrenizi mi unuttunuz?",
+      "sendResetLink": "Şifre sıfırlama e-postası gönder",
+      "success": "Şifre sıfırlama e-postası gönderildi",
+      "description": "Şifrenizi sıfırlamak için bir e-posta gönderildi. Lütfen e-postanızı kontrol edin ve sıfırlama işlemini tamamlayın."
+    },
+    "resetPassword": {
+      "label": "Şifrenizi sıfırla",
+      "success": "Şifre sıfırlama başarılı",
+      "submit": "Şifre sıfırlama",
+      "description": "Şifreniz başarıyla sıfırlandı. Şimdi giriş yapabilirsiniz."
+    }
+  },
+  "dashboard": {
+    "totalUsers": "Toplam Kullanıcı",
+    "activeUsers": "Aktif Kullanıcı",
+    "totalCustomers": "Toplam Müşteri",
+    "totalPosts": "Toplam Gönderi",
+    "newUsers": "Bugünkü Yeni Kullanıcılar",
+    "welcomeMessage": "Hoş geldin, {{name}}"
+  },
+  "home": {
+    "welcome": "Hoş geldiniz",
+    "goToDashboard": "Panel"
+  }
+}
