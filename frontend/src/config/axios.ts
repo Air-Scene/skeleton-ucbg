@@ -8,26 +8,33 @@ interface ExtendedAxiosRequestConfig extends InternalAxiosRequestConfig {
 
 // Constants
 const getApiUrl = () => {
-  // First try to use the environment variable
   const envUrl = import.meta.env.VITE_BACKEND_URL;
+  
+  // If we have an environment variable, use it
   if (envUrl) {
-    return `${envUrl}/api`;
+    // Remove trailing slash if present
+    const baseUrl = envUrl.endsWith('/') ? envUrl.slice(0, -1) : envUrl;
+    return `${baseUrl}/api`;
   }
 
-  // Fallback for development
+  // Development fallback
   if (import.meta.env.DEV) {
+    console.warn('No VITE_BACKEND_URL found, falling back to localhost:8080');
     return 'http://localhost:8080/api';
   }
 
-  // Final fallback
-  console.warn('No backend URL configured, API calls will fail');
+  // Production fallback (this should never happen if deployed correctly)
+  console.error('No VITE_BACKEND_URL found in production environment!');
   return '/api';
 };
 
 const API_CONFIG = {
   baseURL: getApiUrl(),
-  timeout: import.meta.env.PROD ? 10000 : 30000,
+  timeout: import.meta.env.PROD ? 10000 : 30000, // Shorter timeout in production
   withCredentials: true,
+  headers: {
+    'Content-Type': 'application/json',
+  }
 } as const;
 
 const AUTH_ENDPOINTS = {
