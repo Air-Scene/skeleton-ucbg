@@ -45,7 +45,14 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_BACKEND_URL: "https://api-placeholder.example.com"
+          VITE_BACKEND_URL: ${{ secrets.PROD_BACKEND_URL || 'https://api-placeholder.example.com' }}
+      
+      - name: Verify locales
+        run: |
+          if [ ! -d "dist/locales" ]; then
+            echo "Copying locales to dist directory"
+            cp -r public/locales dist/
+          fi
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

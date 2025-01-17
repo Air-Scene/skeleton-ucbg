@@ -3,6 +3,16 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 
+// Get the base URL for loading translations
+const getBasePath = () => {
+  // In development, use root path
+  if (import.meta.env.DEV) {
+    return '';
+  }
+  // In production, use the repository name as base path
+  return '/skeleton-ucbg';
+};
+
 i18n
   .use(Backend)
   .use(LanguageDetector)
@@ -16,7 +26,7 @@ i18n
     },
 
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      loadPath: `${getBasePath()}/locales/{{lng}}/{{ns}}.json`,
     },
   });
 
