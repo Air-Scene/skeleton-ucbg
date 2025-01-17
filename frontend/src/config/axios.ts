@@ -8,20 +8,20 @@ interface ExtendedAxiosRequestConfig extends InternalAxiosRequestConfig {
 
 // Constants
 const getApiUrl = () => {
-  try {
-    const protocol = window.location.protocol;
-    const hostname = window.location.hostname;
-
-    if (hostname === 'localhost') {
-      return `${protocol}//${hostname}:8080/api`;
-    }
-
-    const port = window.location.port ? `:${window.location.port}` : '';
-    return `${protocol}//${hostname}:${port}/api`;
-  } catch (error) {
-    console.error('Failed to construct API URL:', error);
-    return '/api';  // Simple fallback to relative path
+  // First try to use the environment variable
+  const envUrl = import.meta.env.VITE_BACKEND_URL;
+  if (envUrl) {
+    return `${envUrl}/api`;
   }
+
+  // Fallback for development
+  if (import.meta.env.DEV) {
+    return 'http://localhost:8080/api';
+  }
+
+  // Final fallback
+  console.warn('No backend URL configured, API calls will fail');
+  return '/api';
 };
 
 const API_CONFIG = {

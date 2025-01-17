@@ -45,7 +45,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_BACKEND_URL: ${{ secrets.PROD_BACKEND_URL }}
+          VITE_BACKEND_URL: "https://api-placeholder.example.com"
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
