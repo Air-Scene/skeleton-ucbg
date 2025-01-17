@@ -6,8 +6,7 @@ import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   // Base URL should match your repository name
-  // Example: if your repo is "my-app", use "/my-app/"
-  // base: '/frontend/',
+  base: '/skeleton-ucbg/',
   
   plugins: [react(), tsconfigPaths()],
   
